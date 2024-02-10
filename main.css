@@ -21,7 +21,9 @@
     z-index: 9999;
 }
 
-  
+.cursor-not-allowed{
+    cursor: not-allowed;
+}
   @keyframes fall {
     from {
        transform: translateY(0vh) translateX(-10vw); 
