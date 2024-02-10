@@ -3,6 +3,7 @@ const btnNo = document.querySelector(".btn-no");
 const image = document.querySelector('.js-img');
 const body = document.querySelector('.js-bod');
 const title = document.querySelector('.js-title');
+const audio = document.querySelector('.js-audio');
 
 let stupidText = ['Are you sure?', 'Really sure?', 'Think again!', 'Last Chance', 'surely not?', 'You might regret this!', 'Give it another thought', 'Are you absolutely sure?', 'This could be a mistake!', 'Have a heart!', 'Don\'t be so cold!', 'Change of Heart?', 'Wouldn\'t you reconsider', 'Is that your final answer?', "You're breaking my heart :(", 'You leave me no choice!'];
 
@@ -17,8 +18,8 @@ btnYes.addEventListener('click', () => {
     
     body.classList.remove('bg-cyan-200');
     body.classList.add('bg-red-400m');
-
-
+    setInterval(createHeart, 300);
+    createHeart();
     title.innerText = 'MWAAAAAA!';
 })
 
@@ -46,6 +47,7 @@ btnNo.addEventListener('click', () => {
 function hideButtons() {
     btnYes.style.display = 'none';
     btnNo.style.display = 'none';
+    audio.classList.remove('hidden');
 }
 
 function disableNoButton() {
@@ -65,3 +67,21 @@ function changeThePosition() {
 
     btnNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
+
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    
+    heart.innerText = '💗';
+    
+    document.body.appendChild(heart);
+    
+    setTimeout(() => {
+                heart.remove();
+                }, 5000);
+  }
+  
+  
