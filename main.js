@@ -18,7 +18,7 @@ btnYes.addEventListener('click', () => {
     
     body.classList.remove('bg-cyan-200');
     body.classList.add('bg-red-400m');
-    setInterval(createHeart, 300);
+    setInterval(createHeart, 100);
     createHeart();
     title.innerText = 'MWAAAAAA!';
 })
