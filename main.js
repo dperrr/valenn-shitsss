@@ -14,7 +14,7 @@ btnNo.addEventListener('click', () => {
         img.src = sadCat[currentIndex];
         currentIndex++;
     }
-
+//WAIT JUST TRYING
     if (currentIndex === stupidText.length) {
         setTimeout(() => {
             btnNo.classList.add('cursor-not-allowed');
