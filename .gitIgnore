@@ -1,18 +1,6 @@
-# Node.js
+# Node.js dependencies
 node_modules/
 
-# Build files
-/dist/
-/build/
-
-# Cache and logs
-.cache/
-.log/
-
-# Editor-specific files
-.vscode/
-.idea/
-
-# Miscellaneous
-.DS_Store
-Thumbs.db
+# Compiled output
+dist/
+build/
