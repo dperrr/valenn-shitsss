@@ -1,0 +1,14 @@
+
+.btn-yes{
+
+}
+
+.btn-no {
+
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.wrapper {
+    position: relative;
+}
